@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         metroTask = new MetronomeAsyncTask();
 
-        bpmText = (TextView) findViewById(R.id.bpmText);
+        bpmText = (TextView) findViewById(R.id.bpmText);        // beet per minute.
         bpmSeek = (SeekBar) findViewById(R.id.bpmSeek);
         starButton = (Button) findViewById(R.id.star);
         changeSoundButton = (Button) findViewById(R.id.changeSound);
