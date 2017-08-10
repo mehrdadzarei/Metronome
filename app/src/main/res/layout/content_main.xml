@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mehrdadpy.com.metronome.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <SeekBar
+        android:id="@+id/bpmSeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:max="290"
+        android:progressDrawable="@drawable/progressbar"
+        android:thumb="@drawable/thumb"/>
+
+    <Button
+        android:id="@+id/star"
+        android:layout_below="@+id/bpmSeek"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:text="@string/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/bpmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bpmSeek"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/star"
+        android:layout_marginLeft="40dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bpmUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bpmSeek"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/bpmText"
+        android:layout_marginLeft="3dp"
+        android:textColor="#000"
+        android:text="BPM"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/changeSound"
+        android:layout_below="@+id/bpmSeek"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:text="@string/changeSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/beatText"
+        android:layout_below="@+id/changeSound"
+        android:text="@string/beatText"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/beatsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeSound"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/beatText"
+        android:background="#c7085958"
+        android:hint=" (1-12) "
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/beatValue"
+        android:layout_below="@+id/changeSound"
+        android:text="@string/beatValue"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@+id/beatValueId"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/beatValueId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/changeSound"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="#c7085958"
+        android:hint=" (2,4,8,16) "
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/metronomeId"
+        android:layout_below="@+id/beatsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/metronome1">
+
+    </RelativeLayout>
+
+</RelativeLayout>
